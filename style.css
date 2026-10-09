@@ -138,7 +138,7 @@ body {
             
             /* Mengatur jarak agar pas di bawah titik tiga sebelah kanan */
             right: 10px;
-            left: 100%; /* Membuatnya otomatis muncul tepat di bawah batas kotak tombol */
+            left: 50%; /* Membuatnya otomatis muncul tepat di bawah batas kotak tombol */
             margin-top: 3px; /* Memberi sedikit jarak tipis agar tidak terlalu menempel */
             
             background-color: #000000;
