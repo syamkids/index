@@ -1,0 +1,194 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .profile-img {
+            width: 200px;                 /* Mengatur lebar foto profil */
+            height: 200px;                /* Mengatur tinggi foto profil (wajib sama dengan width) */
+            border-radius: 50%;           /* Memotong gambar secara paksa menjadi lingkaran sempurna */
+            object-fit: cover;            /* Memastikan wajah karakter anime tidak gepeng atau ketarik */
+            margin: 0 auto 20px auto;     /* Membuat posisi foto otomatis di tengah dan memberi jarak ke teks bawahnya */
+            display: block;
+    
+            /* Efek Garis Tepi Neon Cyan Menyala (Sesuai dengan gambar Anda) */
+            border: 3px solid #00F0FF; 
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.6), inset 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+    h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #CCFFFF;
+            text-transform: none; /* Tetap mempertahankan huruf besar-kecil */
+            margin-bottom: 2px;   /* Jarak tipis ke tulisan bawahnya */
+    
+            /* Efek teks menyala neon */
+            text-shadow: 0 0 6px rgba(0, 240, 255, 0.7);
+        }
+    p {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 30px;
+            font-weight: 500;
+            color: #FFFFFF;       /* Ungu lembut agar menyatu dengan latar belakang */
+            letter-spacing: 2px;  /* Membuat tulisan renggang estetis */
+            opacity: 0.8;         /* Membuatnya sedikit transparan agar elegan */
+            text-shadow: 0 0 6px rgba(118, 75, 162, 0.9), 0 0 12px rgba(162, 155, 254, 0.5);
+        }
+        .btn-utama {
+             animation: neonPulse 2s infinite alternate;
+        }
+
+                @keyframes neonPulse {
+                    from {
+                    box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+                         }
+                    to {
+                    box-shadow: 0 0 20px rgba(0, 240, 255, 1), 0 0 30px rgba(0, 240, 255, 0.4);
+                         }
+        }
+        .link-card {
+            width: 100%;
+            max-width: 350px;
+            background: rgba(22,18,51,0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 21px;
+            color:#CCFFFF;
+            padding: 3px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1.5px solid #00F0FF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .link-card .btn-icon {
+            font-size: 22px;           /* Ukuran ikon disesuaikan dengan besar teks */
+            margin-right: 12px;        /* Jarak antara ikon dan teks di sebelah kanannya */
+            color: #00F0FF;            /* Warna ikon (bisa diganti #FFFFFF jika ingin putih bersih) */
+            display: flex;
+            align-items: center;
+             /* Memberikan efek pendaran neon cyan di sekitar file gambar ikon Anda */
+            filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.8));
+            padding-left: 15px;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+    /* Perpaduan bayangan merah di kiri dan cyan di kanan menciptakan efek RGB Glitch */
+    box-shadow: -3px 0 10px rgba(255, 0, 127, 0.7), 
+                 3px 0 10px rgba(0, 240, 255, 0.8), 
+                 0 0 20px rgba(0, 240, 255, 0.3);
+    border-color: #FFFFFF;
+        }
+        /* Mengatur tombol link utama */
+        .link-btn {
+            flex-grow: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Desain tombol titik tiga */
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: #00ffff;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+
+        /* Tombol pilihan di dalam menu dropdown */
+        .dropdown-content button {
+            color: white;
+            padding: 10px 12px;
+            text-decoration: none;
+            display: block;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            
+            /* Mengatur jarak agar pas di bawah titik tiga sebelah kanan */
+            right: 10px;
+            left: 100%; /* Membuatnya otomatis muncul tepat di bawah batas kotak tombol */
+            margin-top: 3px; /* Memberi sedikit jarak tipis agar tidak terlalu menempel */
+            
+            background-color: #000000;
+            border: 1.5px solid #00F0FF;
+            border-radius: 8px;
+            min-width: 130px;
+            z-index: 100; /* Memastikan menu berada di lapisan paling atas */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .dropdown-content button:hover {
+            background-color: rgba(0, 255, 255, 0.2);
+        }
+
+        /* Class pembantu untuk memunculkan menu via JavaScript */
+        .show {
+        display: block;
+        }
+        /* Pembungkus luar semua tombol untuk dudukan posisi siku */
+.links-container {
+    width: 100%;
+    max-width: 390px;      /* Dibuat sedikit lebih lebar dari tombol (350px) agar memberi ruang bernapas */
+    position: relative;
+    padding: 18px 20px;    /* Memberi jarak aman antara siku luar dengan tombol di dalam */
+    box-sizing: border-box;
+}
+
+/* Membuat dekorasi siku di pojok kiri atas dan kanan bawah */
+.links-container::before, 
+.links-container::after {
+    content: "";
+    position: absolute;
+    width: 24px;           /* Panjang garis siku ke samping */
+    height: 24px;          /* Panjang garis siku ke bawah */
+    border-color: #00F0FF; /* Warna neon cyan sesuai tema Anda */
+    border-style: solid;
+    pointer-events: none;  /* Agar tidak menghalangi klik mouse */
+    filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.8)); /* Memberikan efek cahaya neon menyala */
+}
+
+/* Penempatan Siku Kiri Atas */
+.links-container::before {
+    top: 0; 
+    left: 0;
+    border-width: 3px 0 0 3px; /* Membuat garis atas dan kiri saja */
+}
+
+/* Penempatan Siku Kanan Bawah */
+.links-container::after {
+    bottom: 0; 
+    right: 0;
+    border-width: 0 3px 3px 0; /* Membuat garis bawah dan kanan saja */
+}
